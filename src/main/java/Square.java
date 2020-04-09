@@ -1,12 +1,11 @@
 public  class Square {
 
     private String name;
-    private static int count;
     private int index;
 
-    public Square(String name) {
+    public Square(String name, int index) {
         this.name = name;
-        index = count++;
+        this.index = index;
     }
 
     public String getName() {

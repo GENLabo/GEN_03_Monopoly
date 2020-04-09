@@ -6,9 +6,9 @@ public class Board {
 
     public Board(){
         squares = new ArrayList<>(40);
-        squares.add(new Square("Go"));
-        for(int i = 1; i <=39; ++i){
-            squares.add(new Square("Square "+i));
+        squares.add(new Square("Go", 0));
+        for(int i = 1; i < 40; ++i){
+            squares.add(new Square("Square "+i, i));
         }
     }
 
