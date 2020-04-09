@@ -11,6 +11,10 @@ public class Piece {
         return location;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setLocation(Square newLoc) {
         location = newLoc;
     }
