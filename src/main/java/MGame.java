@@ -24,8 +24,12 @@ public class MGame {
      * Generate 2 dice
      */
     public MGame(){
-        generatePlayers();
+        // First, generate the dice
         dice = new ArrayList<>(DICE_NB);
+        dice.add(new Die());
+        dice.add(new Die());
+        // Secondly, generate the players
+        generatePlayers();
     }
 
     /**
@@ -38,7 +42,7 @@ public class MGame {
         for(int i = 0; i < randPlayersNb; ++i){
             // Pick a random name and create player
             int randName = rand.nextInt(MAX_PLAYERS_NB );
-            players.add(new Player(PLAYERS_NAMES.get(randName)));
+            players.add(new Player(PLAYERS_NAMES.get(randName), dice));
         }
     }
 
@@ -55,7 +59,9 @@ public class MGame {
      * Play a game round by asking each player to play their turn
      */
     private void playRound(){
-
+        for(Player p : players){
+            p.takeTurn();
+        }
     }
 
     /**
