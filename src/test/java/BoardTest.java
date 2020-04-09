@@ -15,8 +15,8 @@ class BoardTest {
     @Test
     void get8SquareAheadAndDoACycle(){
         Board board = new Board();
-        Square squareGo = board.getSquare(36,4);
-        assertEquals("Go", squareGo.getName());
+        Square square4 = board.getSquare(36,8);
+        assertEquals("Square4", square4.getName());
     }
 
     @Test
