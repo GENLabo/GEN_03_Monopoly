@@ -1,7 +1,13 @@
 public class Main {
 
     public static void main(String[] args){
-        System.out.println("Hello World !");
+        Die die = new Die();
+
+        for(int i = 0; i < 10; ++i){
+            die.roll();
+            System.out.println(die.getFaceValue());
+        }
+
     }
 
 }
