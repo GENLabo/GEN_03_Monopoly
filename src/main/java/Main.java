@@ -1,11 +1,18 @@
 public class Main {
 
     public static void main(String[] args){
-        Die die = new Die();
 
-        for(int i = 0; i < 10; ++i){
-            die.roll();
-            System.out.println(die.getFaceValue());
+        // Need the player number [2-8] as argument to play
+        if(args.length != 1){
+            throw new RuntimeException("The application must have one argument as the number of player : [2-8]");
+        }
+
+        try{
+            int playerNumber = Integer.parseInt(args[0]);
+            MGame monopoly = new MGame(playerNumber);
+            monopoly.playGame();
+        }catch(NumberFormatException e){
+            System.out.println("The number of player must be a number between : [2-8]");
         }
 
     }
