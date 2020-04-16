@@ -2,19 +2,25 @@ import java.util.ArrayList;
 
 public class Player {
 
+    private final static int startingCash = 1500;
+
     private ArrayList<Die> dice;
     private String name;
     Board board;
     Piece piece;
-
+    int cash;
 
     public Player(String name, ArrayList<Die> dice, Board board){
         this.name = name;
         this.dice = dice;
         this.board = board;
         this.piece = new Piece(name + "-piece", board.getSquareByIndex(0));
+        this.cash = startingCash;
     }
 
+    /**
+     * The player rolls the dice and moves to a new location
+     */
     public void takeTurn(){
         int totalDiceFaceValue = 0;
         // Roll the dice and get the totalValue
@@ -30,5 +36,35 @@ public class Player {
 
         System.out.println(name + " with piece \"" + piece.getName() + "\"" + " rolled " + totalDiceFaceValue + " and move from " + oldLocation.getName() + " to " + newLocation.getName());
     }
+
+    /**
+     * Add cash to the player
+     * @param amount
+     */
+    public void addCash(int amount) {
+        if(amount < 0)
+            throw new RuntimeException("Cannot add negative amount of cash to player.");
+        this.cash += amount;
+    }
+
+    /**
+     * Get the player's cash amount
+     * @return
+     */
+    public int getNetWorth() {
+        return cash;
+    }
+
+    /**
+     * Reduces the player's cash amount
+     * @param amount
+     */
+    public void reduceCash(int amount) {
+        if(amount < 0)
+            throw new RuntimeException("Cannot reduce negative amount of cash.");
+        this.cash -= amount;
+    }
+
+
 
 }

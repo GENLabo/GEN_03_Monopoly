@@ -6,9 +6,10 @@ public class Board {
 
     public Board(){
         squares = new ArrayList<>(40);
-        squares.add(new Square("Go", 0));
+        squares.add(new GoSquare("Go", 0));
         for(int i = 1; i < 40; ++i){
-            squares.add(new Square("Square "+i, i));
+            // TODO generate all types of squares
+            squares.add(new RegularSquare("Square "+i, i));
         }
     }
 
