@@ -6,7 +6,8 @@ class SquareTest {
 
     @Test
     void getName() {
-        Square square = new Square("5");
+        Board board = new Board();
+        Square square = board.getSquareByIndex(5);
         assertNotNull(square.getName());
     }
 }
