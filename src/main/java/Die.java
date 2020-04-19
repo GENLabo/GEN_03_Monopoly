@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Die {
+class Die {
 
     private static final int MAX_VALUE = 6;
     private static Random random;

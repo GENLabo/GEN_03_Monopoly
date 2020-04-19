@@ -1,21 +1,14 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
 
 public class MGame {
 
-    private final ArrayList<String> PLAYERS_NAMES = new ArrayList<String>(
-            Arrays.asList("Loïc", "Robin", "Vitor", "Charles", "Lucie", "Luc", "Alex", "Luna")
-    );
-
     private final int MIN_PLAYERS_NB = 2;
     private final int MAX_PLAYERS_NB = 8;
-    private final int DICE_NB = 2;
+    private final int DICE_NB = 2; // Monopoly game is playing with 2 dice
     private final int ROUNDS_NB = 20;
 
-    private Random rand = new Random();
     private ArrayList<Player> players;
-    private ArrayList<Die> dice;
+    private Cup diceCup;
     private Board board;
 
 
@@ -30,9 +23,7 @@ public class MGame {
         }
         board = new Board();
         // generate the dice
-        dice = new ArrayList<>(DICE_NB);
-        dice.add(new Die());
-        dice.add(new Die());
+        this.diceCup = new Cup(DICE_NB);
 
         generatePlayers(playerNb);
     }
@@ -44,7 +35,7 @@ public class MGame {
     private void generatePlayers(int playerNb){
         players = new ArrayList<>(playerNb);
         for(int i = 0; i < playerNb; ++i){
-            players.add(new Player("Player" + (i+1), dice, board));
+            players.add(new Player("Player" + (i+1), diceCup, board));
         }
     }
 
