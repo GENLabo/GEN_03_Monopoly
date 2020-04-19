@@ -9,7 +9,7 @@ public abstract class Square {
      * @param index
      */
     public Square(String name, int index) {
-        this.name = name;
+        this.name = name + " " + index;
         this.index = index;
     }
 
