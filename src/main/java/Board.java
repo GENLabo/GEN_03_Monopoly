@@ -6,7 +6,7 @@ public class Board {
     // Squares' indexes go from 0 to totalSquareNumber-1, where 0 is the GoSquare
     private ArrayList<Square> squares;
 
-    // If the following indexes overlap, Jail has the highest priority, then GoToJail ad finally RegularSquare
+    // If the following indexes overlap, Jail has the highest priority, then GoToJail and finally RegularSquare
     private final int totalSquareNumber = 40;
     private final int GOTO_JAIL_INDEX = 30;
     private final int JAIL_INDEX = 10;
