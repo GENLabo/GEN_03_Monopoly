@@ -4,15 +4,15 @@ public class Player {
 
     private final static int startingCash = 1500;
 
-    private ArrayList<Die> dice;
+    private Cup diceCup;
     private String name;
     Board board;
     Piece piece;
     int cash;
 
-    public Player(String name, ArrayList<Die> dice, Board board){
+    public Player(String name, Cup diceCup, Board board){
         this.name = name;
-        this.dice = dice;
+        this.diceCup = diceCup;
         this.board = board;
         this.piece = new Piece(name + "-piece", board.getSquareByIndex(0));
         this.cash = startingCash;
@@ -22,12 +22,8 @@ public class Player {
      * The player rolls the dice and moves to a new location
      */
     public void takeTurn(){
-        int totalDiceFaceValue = 0;
-        // Roll the dice and get the totalValue
-        for(int i = 0; i < dice.size(); ++i){
-            dice.get(i).roll();
-            totalDiceFaceValue += dice.get(i).getFaceValue();
-        }
+        diceCup.roll();
+        int totalDiceFaceValue = diceCup.getTotal();
 
         // Fetch the new location related to the current one and the dice values and move into the new location
         Square oldLocation = piece.getLocation();
