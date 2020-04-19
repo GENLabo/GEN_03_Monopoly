@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
     Board board = new Board();
-    Cup cup = new Cup(2);
+    Cup cup = new Cup();
     Player toto;
 
     @BeforeEach

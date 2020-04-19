@@ -7,7 +7,7 @@ class GoToJailSquareTest {
     @Test
     void landedOnGoToJailSquare() {
         Board board = new Board();
-        Cup cup = new Cup(2);
+        Cup cup = new Cup();
         Player toto = new Player("toto",cup,board);
         GoToJailSquare goToJailSquare = (GoToJailSquare) board.getSquareByIndex(30);
         goToJailSquare.landedOn(toto);
