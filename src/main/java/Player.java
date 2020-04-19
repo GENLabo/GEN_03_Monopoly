@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Player {
 
     private final static int startingCash = 1500;
@@ -25,12 +23,24 @@ public class Player {
         diceCup.roll();
         int totalDiceFaceValue = diceCup.getTotal();
 
+        System.out.println(name + " (piece \"" + piece.getName() + "\") has " + getNetWorth() + " cash and rolled " + totalDiceFaceValue);
+
         // Fetch the new location related to the current one and the dice values and move into the new location
+        move(board.getSquare(piece.getLocation(), totalDiceFaceValue));
+
+        System.out.println(); // Line return
+    }
+
+    /**
+     * Sends player to a new location and display the "travel".
+     * @param newLocation
+     */
+    public void move(Square newLocation) {
         Square oldLocation = piece.getLocation();
-        Square newLocation = board.getSquare(oldLocation, totalDiceFaceValue);
         piece.setLocation(newLocation);
 
-        System.out.println(name + " with piece \"" + piece.getName() + "\"" + " rolled " + totalDiceFaceValue + " and move from " + oldLocation.getName() + " to " + newLocation.getName());
+        System.out.println(name + " moved from " + oldLocation.getName() + " to " + newLocation.getName());
+        newLocation.landedOn(this);
     }
 
     /**
@@ -41,6 +51,7 @@ public class Player {
         if(amount < 0)
             throw new RuntimeException("Cannot add negative amount of cash to player.");
         this.cash += amount;
+        System.out.println(name + " received " + amount);
     }
 
     /**
@@ -59,8 +70,7 @@ public class Player {
         if(amount < 0)
             throw new RuntimeException("Cannot reduce negative amount of cash.");
         this.cash -= amount;
+        System.out.println(name + " paid " + amount);
     }
-
-
 
 }
