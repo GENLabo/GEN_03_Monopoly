@@ -1,6 +1,7 @@
 /*
-  Authors: Robin Demarta, Loïc Dessaules, Vitor Vaz Afonso
-  Date: 20.04.2020
+ * Authors : Loïc Dessaules, Vitor Vaz Afonso, Robin Demarta
+ * Date : 20.04.2020
+ * File : MGame.java
  */
 
 import java.util.ArrayList;
@@ -18,8 +19,6 @@ public class MGame {
 
     /**
      * Public constructor, game initialisation
-     * Generate a random number of players
-     * Generate 2 dice
      */
     public MGame(int playerNb){
         if(playerNb < MIN_PLAYERS_NB || playerNb > MAX_PLAYERS_NB){

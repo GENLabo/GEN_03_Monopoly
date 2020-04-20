@@ -15,7 +15,6 @@ class DieTest {
         int[] dieValues = new int[50];
         for(int i = 0; i < dieValues.length; ++i){
             die.roll();
-            System.out.println(die.getFaceValue());
             assertTrue(die.getFaceValue() >= 1 && die.getFaceValue() <= 6);
         }
     }

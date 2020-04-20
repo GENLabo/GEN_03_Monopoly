@@ -1,6 +1,7 @@
 /*
-  Authors: Robin Demarta, Loïc Dessaules, Vitor Vaz Afonso
-  Date: 20.04.2020
+ * Authors : Loïc Dessaules, Vitor Vaz Afonso, Robin Demarta
+ * Date : 20.04.2020
+ * File : IncomeTaxSquare.java
  */
 
 public class IncomeTaxSquare extends Square {
@@ -14,7 +15,7 @@ public class IncomeTaxSquare extends Square {
     /**
      * Makes the player pay the tax.
      * The amount of the tax is 10% of player's net worth or maxTax at maximum.
-     * @param player
+     * @param player The Player
      */
     @Override
     void landedOn(Player player) {
