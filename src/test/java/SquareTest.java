@@ -5,9 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class SquareTest {
 
     @Test
-    void getName() {
+    void getNameNotNull() {
         Board board = new Board();
         Square square = board.getSquareByIndex(5);
         assertNotNull(square.getName());
     }
+
 }

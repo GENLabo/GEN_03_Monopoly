@@ -4,7 +4,6 @@ public class MGame {
 
     private final int MIN_PLAYERS_NB = 2;
     private final int MAX_PLAYERS_NB = 8;
-    private final int DICE_NB = 2; // Monopoly game is playing with 2 dice
     private final int ROUNDS_NB = 20;
 
     private ArrayList<Player> players;
@@ -23,7 +22,7 @@ public class MGame {
         }
         board = new Board();
         // generate the dice
-        this.diceCup = new Cup(DICE_NB);
+        this.diceCup = new Cup();
 
         generatePlayers(playerNb);
     }

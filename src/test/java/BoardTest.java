@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,19 +6,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class BoardTest {
 
     @Test
-    @Disabled
     void get6SquareAhead(){
         Board board = new Board();
         Square square10 = board.getSquare(board.getSquareByIndex(4),6);
-        assertEquals("Square 10", square10.getName());
+        assertEquals("Jail 10", square10.getName());
     }
 
     @Test
-    @Disabled
     void get8SquareAheadAndDoACycle(){
         Board board = new Board();
         Square square4 = board.getSquare(board.getSquareByIndex(36),8);
-        assertEquals("Square 4", square4.getName());
+        assertEquals("IncomeTaxSquare 4", square4.getName());
     }
 
     @Test
