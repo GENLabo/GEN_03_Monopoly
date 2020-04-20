@@ -1,3 +1,9 @@
+/*
+ * Authors : Loïc Dessaules, Vitor Vaz Afonso, Robin Demarta
+ * Date : 20.04.2020
+ * File : Die.java
+ */
+
 import java.util.Random;
 
 class Die {

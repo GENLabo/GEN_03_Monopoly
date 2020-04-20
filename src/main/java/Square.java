@@ -1,3 +1,9 @@
+/*
+ * Authors : Loïc Dessaules, Vitor Vaz Afonso, Robin Demarta
+ * Date : 20.04.2020
+ * File : Square.java
+ */
+
 public abstract class Square {
 
     private String name;
@@ -15,7 +21,7 @@ public abstract class Square {
 
     /**
      * Get the name
-     * @return
+     * @return The square name
      */
     public String getName() {
         return name;
@@ -23,7 +29,7 @@ public abstract class Square {
 
     /**
      * Get the index
-     * @return
+     * @return The square index
      */
     public int getIndex() {
         return index;

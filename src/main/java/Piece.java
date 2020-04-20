@@ -1,3 +1,9 @@
+/*
+ * Authors : Loïc Dessaules, Vitor Vaz Afonso, Robin Demarta
+ * Date : 20.04.2020
+ * File : Piece.java
+ */
+
 public class Piece {
     private String name;
     private Square location;
@@ -9,7 +15,7 @@ public class Piece {
 
     /**
      * Get the location
-     * @return
+     * @return The current location
      */
     public Square getLocation() {
         return location;
@@ -17,7 +23,7 @@ public class Piece {
 
     /**
      * Get the name
-     * @return
+     * @return The name
      */
     public String getName() {
         return name;
@@ -25,7 +31,7 @@ public class Piece {
 
     /**
      * Set the location
-     * @param newLoc
+     * @param newLoc The new location
      */
     public void setLocation(Square newLoc) {
         location = newLoc;

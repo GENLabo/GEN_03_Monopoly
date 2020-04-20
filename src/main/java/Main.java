@@ -1,3 +1,9 @@
+/*
+ * Authors : Loïc Dessaules, Vitor Vaz Afonso, Robin Demarta
+ * Date : 20.04.2020
+ * File : Main.java
+ */
+
 public class Main {
 
     public static void main(String[] args){
