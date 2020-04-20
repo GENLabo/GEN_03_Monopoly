@@ -1,3 +1,9 @@
+/*
+ * Authors : Loïc Dessaules, Vitor Vaz Afonso, Robin Demarta
+ * Date : 20.04.2020
+ * File : RegularSquare.java
+ */
+
 public class RegularSquare extends Square {
     public RegularSquare(String name, int index) {
         super(name, index);

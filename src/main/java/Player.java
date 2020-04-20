@@ -1,3 +1,9 @@
+/*
+ * Authors : Loïc Dessaules, Vitor Vaz Afonso, Robin Demarta
+ * Date : 20.04.2020
+ * File : Player.java
+ */
+
 public class Player {
 
     private final static int startingCash = 1500;
@@ -56,7 +62,7 @@ public class Player {
 
     /**
      * Get the player's cash amount
-     * @return
+     * @return The player current cash amount
      */
     public int getNetWorth() {
         return cash;

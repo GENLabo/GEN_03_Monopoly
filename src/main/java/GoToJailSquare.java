@@ -1,3 +1,9 @@
+/*
+ * Authors : Loïc Dessaules, Vitor Vaz Afonso, Robin Demarta
+ * Date : 20.04.2020
+ * File : GoToJailSquare.java
+ */
+
 public class GoToJailSquare extends Square {
 
     private Square jail;
@@ -12,7 +18,7 @@ public class GoToJailSquare extends Square {
 
     /**
      * Sends player straight to the jail.
-     * @param player
+     * @param player The Player
      */
     @Override
     void landedOn(Player player) {
