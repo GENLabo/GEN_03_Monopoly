@@ -1,3 +1,8 @@
+/*
+  Authors: Robin Demarta, Loïc Dessaules, Vitor Vaz Afonso
+  Date: 20.04.2020
+ */
+
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

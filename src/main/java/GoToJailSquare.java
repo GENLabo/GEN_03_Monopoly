@@ -1,3 +1,8 @@
+/*
+  Authors: Robin Demarta, Loïc Dessaules, Vitor Vaz Afonso
+  Date: 20.04.2020
+ */
+
 public class GoToJailSquare extends Square {
 
     private Square jail;

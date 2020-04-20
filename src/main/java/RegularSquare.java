@@ -1,3 +1,8 @@
+/*
+  Authors: Robin Demarta, Loïc Dessaules, Vitor Vaz Afonso
+  Date: 20.04.2020
+ */
+
 public class RegularSquare extends Square {
     public RegularSquare(String name, int index) {
         super(name, index);

@@ -1,16 +1,20 @@
+/*
+  Authors: Robin Demarta, Loïc Dessaules, Vitor Vaz Afonso
+  Date: 20.04.2020
+ */
+
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Board {
 
     // Squares' indexes go from 0 to totalSquareNumber-1, where 0 is the GoSquare
     private ArrayList<Square> squares;
 
-    // If the following indexes overlap, Jail has the highest priority, then GoToJail and finally RegularSquare
+    // If the following indexes overlap, priority is set as defined in the switch-case structure in Board()
     private final int totalSquareNumber = 40;
     private final int GOTO_JAIL_INDEX = 30;
     private final int JAIL_INDEX = 10;
-    private final ArrayList<Integer> INCOMETAX_INDEXES = new ArrayList<>(Arrays.asList(4, 25));
+    private final int INCOMETAX_INDEX = 4;
 
     /**
      * Generates all types of squares.
@@ -26,16 +30,18 @@ public class Board {
         Square newSquare;
         for(int i = 1; i < totalSquareNumber; ++i) { // Start at 1 because start has already been set
             // Squares' position in container match their index, so we avoid confusion
-            if(INCOMETAX_INDEXES.contains(i)) {
-                // IncomeTaxSquare
-                newSquare = new IncomeTaxSquare("IncomeTaxSquare", i);
-            } else if (i == GOTO_JAIL_INDEX) {
-                // GoToJailSquare
-                goToJailSquare = new GoToJailSquare("GoToJailSquare", i);
-                newSquare = goToJailSquare;
-            } else {
-                // Regular squares (one of which will be the jail)
-                newSquare = new RegularSquare(i == JAIL_INDEX ? "Jail" : "RegularSquare", i);
+
+            switch(i) {
+                case INCOMETAX_INDEX: // IncomeTaxSquare
+                    newSquare = new IncomeTaxSquare("IncomeTaxSquare", i);
+                    break;
+                case GOTO_JAIL_INDEX: // GoToJailSquare
+                    goToJailSquare = new GoToJailSquare("GoToJailSquare", i);
+                    newSquare = goToJailSquare;
+                    break;
+                default: // Regular squares (one of which will be the jail)
+                    newSquare = new RegularSquare(i == JAIL_INDEX ? "Jail" : "RegularSquare", i);
+                    break;
             }
             squares.add(i, newSquare);
         }
@@ -43,7 +49,6 @@ public class Board {
         // Set which square is the jail
         if(goToJailSquare != null)
             goToJailSquare.setJail(squares.get(JAIL_INDEX));
-
     }
 
     /**
