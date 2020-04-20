@@ -1,4 +1,8 @@
-import org.junit.jupiter.api.AfterEach;
+/*
+  Authors: Robin Demarta, Loïc Dessaules, Vitor Vaz Afonso
+  Date: 20.04.2020
+ */
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,3 +1,8 @@
+/*
+  Authors: Robin Demarta, Loïc Dessaules, Vitor Vaz Afonso
+  Date: 20.04.2020
+ */
+
 import java.util.ArrayList;
 
 public class Cup {
